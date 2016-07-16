@@ -9,11 +9,11 @@ public class Program
 	public class Violation 
 	{
 	
-		public int 			ViolationID {get;set;}
-		public int 			InspectionID{get;set;}
+		public int 		ViolationID 	{get;set;}
+		public int 		InspectionID	{get;set;}
 		public string 		VCategory 	{get;set;}
 		public DateTime 	VDate 		{get;set;}
-		public DateTime 	VDateClosed {get;set;}
+		public DateTime 	VDateClosed 	{get;set;}
 		public string 		VType 		{get;set;}
 	}
 	
@@ -69,10 +69,10 @@ public class Program
 					{
 						ViolationID 	= Int32.Parse(column[0]), 
 						InspectionID 	= Int32.Parse(column[1]), 
-						VCategory 		= column[2], 
-						VDate 			= Convert.ToDateTime(column[3]), 
+						VCategory 	= column[2], 
+						VDate 		= Convert.ToDateTime(column[3]), 
 						VDateClosed 	= (column[4].Length == 0) ? DateTime.Now : Convert.ToDateTime(column[4]), 
-						VType 			= column[5]
+						VType 		= column[5]
 					};
 					
 					//Put it in the array list of the object
@@ -99,8 +99,8 @@ public class Program
 		foreach (var v in CategoryCounts)
 		{
 			Console.WriteLine("Violation \'{0}\' occurs {1} times.", v.Key, v.count);
-			Console.WriteLine("» Earliest Day of the violation : " + v.earliest.ToString("ddd MMM dd, yyyy"));
-			Console.WriteLine("» Latest Day of the violation   : " + v.latest.ToString("ddd MMM dd, yyyy"));
+			Console.WriteLine("Â» Earliest Day of the violation : " + v.earliest.ToString("ddd MMM dd, yyyy"));
+			Console.WriteLine("Â» Latest Day of the violation   : " + v.latest.ToString("ddd MMM dd, yyyy"));
 			Console.WriteLine();
 		}
 
